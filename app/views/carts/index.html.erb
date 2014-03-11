@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to new_cart_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Cart
+  <% end %>
+  <legend>Listing carts</legend>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    
+    <th class=" success text-center">ID</th>
+    <tbody>
+      <%= content_tag_for(:tr, @carts) do |cart| %>
+      <td class="text-center text-danger"><%= cart.id%></td>
+            <td><%= link_to 'Show', cart, :class => 'btn btn-primary' %></td>
+
+        <td><%= link_to 'Edit', edit_cart_path(cart), :class => 'btn btn-info' %></td>
+        <td><%= link_to 'Destroy', cart, :class => 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

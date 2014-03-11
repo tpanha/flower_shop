@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to products_path, :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_product_path(@product), :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <legend>Show product</legend>
+</div>
+
+<dl class="dl-horizontal">
+  <div class="col-md-4">
+
+      <td><%= image_tag(@product.image_url) %></td>
+
+  </div>
+  <div class="col-md-8">
+    <dt>Title:</dt>
+    <dd><%= @product.title %></dd>
+
+    <dt>Decription:</dt>
+    <dd><%= @product.decription %></dd>
+
+    <dt>Image url:</dt>
+    <dd><%= @product.image_url %></dd>
+
+    <dt>Price:</dt>
+    <dd><%= number_to_currency(@product.price) %></dd>
+  </div>
+</dl>

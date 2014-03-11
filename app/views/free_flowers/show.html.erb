@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to free_flowers_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_free_flower_path(@free_flower), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show free_flower</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @free_flower.title %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @free_flower.description %></dd>
+
+  <dt>Image url:</dt>
+  <dd><%= @free_flower.image_url %></dd>
+
+</dl>

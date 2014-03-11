@@ -1,0 +1,44 @@
+<%= form_for(@product, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @product.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h4>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :title, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :decription, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.text_area :decription, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :image_url, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :image_url, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :price, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :price, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit :class => "btn btn-purple" %>
+    </div>
+  </div>
+<% end %>

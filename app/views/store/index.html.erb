@@ -1,0 +1,42 @@
+
+<%= render 'layouts/nav' %>
+
+
+  
+
+  
+  
+</div>
+
+    
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+   
+    <tbody>
+
+
+      
+
+      <div class="container"><em><h2>Listing products</h2></em><br></div>
+      <%@products.each do |product| %>
+
+
+        <div class="container">
+          
+
+          <legend><%= product.title %><strong class="float-right text-purple"><%= number_to_currency (product.price) %></strong></legend><br>
+
+          <div class="col-md-4"><%= image_tag(product.image_url) %></div>
+          <div class="col-md-8"><blockquote class="lead">&nbsp &nbsp &nbsp<%= product.decription %><br><%= link_to 'View Details', store_show_path(product_id: product), :class=>"btn btn-purple"%></blockquote></div><br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="float-right"><%= button_to 'Add to cart', line_items_path(product_id: product) , :class=>"btn btn-purple", remote: true %></div><br><br><br><br><br><br><!-- line_items_path(product_id: product) (sent params [:product_id ] to line_items_path) -->
+          
+
+      
+       <br>
+            
+             
+      <% end %>
+    </tbody>
+  </table>
+</div>

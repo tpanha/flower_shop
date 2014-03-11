@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+html body{
+
+	font-family: "Ubuntu" , Helvetica;
+
+}
+
+body a.btn{
+
+	color :#fff;
+}
+
+.col-md-4 img {
+
+	width: 280px;
+	height: 280px;
+
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+
+	box-shadow:  0px 15px 8px -8px rgba(0,0,0,0.5);
+	-moz-box-shadow:  0px 15px 8px -8px rgba(0,0,0,0.5);
+	-webkit-box-shadow:  0px 15px 8px -8px rgba(0,0,0,0.5);
+	-ms-box-shadow:  0px 15px 8px -8px rgba(0,0,0,0.5);
+	-o-box-shadow:  0px 15px 8px -8px rgba(0,0,0,0.5);
+
+}
+.float-right {
+
+
+	float: right;
+}
+
+a.btn.btn-purple:hover{
+
+	color: #fff;
+}
+
+input.btn.btn-purple:hover{
+
+	color: #fff;
+}
+
+input.btn.btn-purple:focus{
+
+	color: #fff;
+}
+
+a.btn.btn-purple:focus{
+
+	color: #fff;
+}
+
+.btn-purple {
+  color: #ffffff;
+  background-color: #72366C;
+  border-color: #9E36A2;
+}
+
+
+
+
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active,
+.btn-purple.active,
+.open .dropdown-toggle.btn-purple {
+  color: #ffffff;
+  background-color: #9E36A2;
+  border-color: #72366C;
+}
+
+.btn-purple:active,
+.btn-purple.active,
+.open .dropdown-toggle.btn-purple {
+  background-image: none;
+}
+
+.btn-purple.disabled,
+.btn-purple[disabled],
+fieldset[disabled] .btn-purple,
+.btn-purple.disabled:hover,
+.btn-purple[disabled]:hover,
+fieldset[disabled] .btn-purple:hover,
+.btn-purple.disabled:focus,
+.btn-purple[disabled]:focus,
+fieldset[disabled] .btn-purple:focus,
+.btn-purple.disabled:active,
+.btn-purple[disabled]:active,
+fieldset[disabled] .btn-purple:active,
+.btn-purple.disabled.active,
+.btn-purple[disabled].active,
+fieldset[disabled] .btn-purple.active {
+  background-color: #72366C;
+  border-color: #9E36A2;
+}
+
+.btn-purple .badge {
+  color: #72366C;
+  background-color: #fff;
+}
+
+.text-purple {
+  color: #72366C;
+}
+
+.table > thead > tr > .purple,
+.table > tbody > tr > .purple,
+.table > tfoot > tr > .purple,
+.table > thead > .purple > td,
+.table > tbody > .purple > td,
+.table > tfoot > .purple > td,
+.table > thead > .purple > th,
+.table > tbody > .purple > th,
+.table > tfoot > .purple > th {
+  background-color: #72366C;
+  color: #fff;
+}
+
+.table-hover > tbody > tr > .purple:hover,
+.table-hover > tbody > .purple:hover > td,
+.table-hover > tbody > .purple:hover > th {
+  background-color: #BB7FB7;
+}
+
+th .purple{
+
+	color: #000;
+}

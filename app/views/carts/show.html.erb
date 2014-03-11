@@ -1,0 +1,10 @@
+<div class="page-header">
+  <%= link_to carts_path, :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_cart_path(@cart), :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+<%= render @cart %>

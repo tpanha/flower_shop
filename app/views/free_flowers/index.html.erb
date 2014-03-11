@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_free_flower_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Free flower
+  <% end %>
+  <h1>Listing free_flowers</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Image url</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @free_flowers) do |free_flower| %>
+            <td><%= free_flower.title %></td>
+            <td><%= free_flower.description %></td>
+            <td><%= free_flower.image_url %></td>
+            <td><%= link_to 'Show', free_flower %></td>
+        <td><%= link_to 'Edit', edit_free_flower_path(free_flower) %></td>
+        <td><%= link_to 'Destroy', free_flower, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

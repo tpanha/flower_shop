@@ -1,0 +1,30 @@
+
+  <legend>Show Cart</legend>
+
+	     <table class="table table-striped table-bordered table-hover">
+
+
+    <thead >
+      <tr class="purple">
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Unite Price</th>       
+      </tr>
+    </thead>
+
+    <tbody>
+     
+      <%= render (cart.line_items)%>
+    
+          <th></th>
+          <th class="text-right ">Total:</th>
+          <th class="text-purple"><%= number_to_currency(@cart.total)%></th>
+    </tbody>
+    <li class="divider">--------------------------------------------------------------------------------------</li>
+  </table>
+  <%= link_to "Empty Cart", @cart, :class=>'btn btn-purple btn-xs', method: :delete, :confirm => "Are you sure ?" %>
+
+</div>
+
+<dl class="dl-horizontal">
+</dl>

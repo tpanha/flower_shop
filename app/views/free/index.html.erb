@@ -1,0 +1,29 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+   
+    <tbody>
+
+
+      
+
+      <div class="container"><em><h2>Listing products</h2></em><br></div>
+      <%@free_flowers.each do |free_flower| %>
+
+
+        <div class="container">
+          
+
+          <legend><%= free_flower.title %></legend><br>
+
+          <div class="col-md-4"><%= image_tag(free_flower.image_url) %></div>
+          <div class="col-md-8"><blockquote class="lead">&nbsp &nbsp &nbsp<%= free_flower.description %>
+         
+
+      
+       <br>
+            
+             
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to line_items_path, :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @line_item, :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing line_item</h1>
+</div>
+
+<%= render 'form' %>

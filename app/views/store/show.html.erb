@@ -1,0 +1,25 @@
+<div class="page-header">
+  
+  <legend>Show product</legend>
+</div>
+
+<dl class="dl-horizontal">
+  <div class="col-md-4">
+
+      <td><%= image_tag(@product.image_url) %></td>
+
+  </div>
+  <div class="col-md-8">
+    <dt><h5>Title:</h5></dt>
+    <dd><h5><%= @product.title %></h5></dd>
+
+    <dt><h5>Decription:</h5></dt>
+    <dd><h5><%= @product.decription %></h5></dd>
+
+    <dt><h5>Image url:</h5></dt>
+    <dd><h5><%= @product.image_url %></h5></dd>
+
+    <dt><h5>Price:</h5></dt>
+    <dd class="text-purple"><h5><%= number_to_currency(@product.price) %></h5></dd>
+  </div>
+</dl>

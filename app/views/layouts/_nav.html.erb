@@ -1,0 +1,57 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <%= link_to "Flower Shop", store_index_path, :class => "navbar-brand" %>
+
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><%= link_to "Home", store_index_path %></li>
+          <li><%= link_to "Free  Flower", free_index_path %></li>
+          <li><a href="#contact">Contact</a></li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+
+              <span class="glyphicon glyphicon-shopping-cart cart-text" id="cart">
+
+                <span id="total-cart"><%= render 'layouts/cart'%></span>&nbsp;<b class="caret"></b> </a>
+                <ul class="dropdown-menu">
+
+                  <div id="cart">
+
+                    
+
+                    &nbsp;<%= render @cart %>
+
+                  
+
+
+                  </div>
+
+                </ul>
+
+              </span>
+
+          
+
+          </li>
+
+        </ul>
+        
+      </div>
+
+    </div>
+  </div>

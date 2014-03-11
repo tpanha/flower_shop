@@ -1,0 +1,31 @@
+<div class="page-header">
+  <%= link_to new_line_item_path, :class => 'btn btn-purple' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Line item
+  <% end %>
+  <h1>Listing line_items</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Product</th>
+            <th>Cart</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @line_items) do |line_item| %>
+            <td><%= line_item.product.title %></td>
+            <td><%= line_item.cart.id %></td>
+            <td><%= link_to 'Show', line_item, :class => 'btn btn-purple' %></td>
+        <td><%= link_to 'Edit', edit_line_item_path(line_item), :class => 'btn btn-purple' %></td>
+        <td><%= link_to 'Destroy', line_item, :class => 'btn btn-purple', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

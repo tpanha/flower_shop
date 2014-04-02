@@ -20,6 +20,26 @@
     <dd><h5><%= @product.image_url %></h5></dd>
 
     <dt><h5>Price:</h5></dt>
-    <dd class="text-purple"><h5><%= number_to_currency(@product.price) %></h5></dd>
+    <dd class="text-purple"><h5><%= number_to_currency(@product.price) %></h5></dd><hr>
+
+    <div class="col-md-4">
+
+        <%= image_tag("30-VIP.jpg", :alt => "Image 1") %>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <%= image_tag("30-VIP.jpg") %>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <%= image_tag("30-VIP.jpg", :alt => "Image 3") %>
+
+    </div>
+
+
   </div>
 </dl>
